@@ -1,17 +1,23 @@
 <?php
-require(__DIR__ .'/lib/wordnik/api/APIClient.php');
 date_default_timezone_set("Europe/London");
 
-require (__DIR__ .'/config.php');
+include_once (__DIR__ .'/config.php');
+
 $numberToGenerate = 25;
 $minLength = 10;
 $maxLength = 2000;
 
-$client = new APIClient($wordnikKey, 'http://api.wordnik.com/v4');
-$wordsAPI = new WordsAPI($client);
-$word = $wordsAPI->getRandomWord(null);
+$output = __DIR__ . "/output/" . date('ymd');
 
-$output = __DIR__ . "/output/" . date('ymd') . " " . $word->word;
+if (defined($wordnikKey)) {
+	require(__DIR__ .'/lib/wordnik/api/APIClient.php');
+
+	$client = new APIClient($wordnikKey, 'http://api.wordnik.com/v4');
+	$wordsAPI = new WordsAPI($client);
+	$word = $wordsAPI->getRandomWord(null);
+	$output .= " " . $word->word;
+}
+
 mkdir($output);
 
 exec("find /Users/jake/Documents/Samples/SFX/  -name *.wav -print | grep -v mine",$out);
