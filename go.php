@@ -20,7 +20,7 @@ if (isset($wordnikKey)) {
 
 mkdir($output);
 
-exec("find {$sourceDirectory} -name *.wav -print | grep -v output",$out);
+exec("find \"{$sourceDirectory}\" -name *.wav -print | grep -v output",$out);
 echo "found " . count($out). " audio files.\n";
 for ($i=0; $i < $numberToGenerate; $i++) { 
 	$file = $out[rand(0,count($out)-1)];
@@ -33,11 +33,11 @@ for ($i=0; $i < $numberToGenerate; $i++) {
 	$params = " trim {$start}s {$length}s";
 	
 	if ($playback==true) {
-		$cmd = "play \"{$file}\" {$params} repeat 25";
+		$cmd = "play --norm \"{$file}\" {$params} repeat 25";
 		passthru($cmd);
 	}
 
-	$cmd = "sox \"{$file}\" \"{$output}/{$i}.wav\" {$params}";
+	$cmd = "sox --norm \"{$file}\" \"{$output}/{$i}.wav\" {$params}";
 	exec($cmd);
 }
 
