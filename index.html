@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Glitch-cutter by JakeWorrell</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Glitch-cutter</h1>
+        <p>A little php script that uses SOX to randomly grab small bits of audio files and put them into new files.</p>
+        <p class="view"><a href="https://github.com/JakeWorrell/Glitch-Cutter">View the Project on GitHub <small>JakeWorrell/Glitch-Cutter</small></a></p>
+        <ul>
+          <li><a href="https://github.com/JakeWorrell/Glitch-Cutter/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/JakeWorrell/Glitch-Cutter/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/JakeWorrell/Glitch-Cutter">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Glitch Cutter</h1>
+
+<p>Glitch Cutter will randomly create small audio files made from a tiny part of your other audio files. It does so randomly in a batch as large as you specify. The code isn't particularly nice, but it works.</p>
+
+<p>I created it to create abstract sounds to be used as instruments in <a href="http://www.renoise.com">Renoise</a>. I also just thought it seemed like a good idea at the time.</p>
+
+<h2>Requirements</h2>
+
+<ul>
+<li>PHP 5.3</li>
+<li>a unix/linux based CLI with 'find' &amp; 'grep' (tested on my Macbook Pro with OSX 10.7.3)</li>
+<li>
+<a href="http://sox.sourceforge.net/Main/HomePage">SOX</a> (which is awesome, by the way)</li>
+<li>(optional) a <a href="http://www.wordnik.com/">Wordnik</a> API key for creating memorable output folder names</li>
+</ul><h2>How To Use</h2>
+
+<ul>
+<li>cp config-example.php config.php and optionally add your wordnik API key</li>
+<li>change any other things you need in config.php (eg, source directory)</li>
+<li>php go.php</li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/JakeWorrell">JakeWorrell</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
