@@ -1,0 +1,4 @@
+<?php
+
+$wordnikKey = "keykeykeykeykeykeykey";
+?>
