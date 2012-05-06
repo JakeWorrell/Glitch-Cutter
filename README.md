@@ -11,3 +11,9 @@ Requirements
  * a unix/linux based CLI with 'find' & 'grep' (tested on my Macbook Pro with OSX 10.7.3)
  * [SOX](http://sox.sourceforge.net/Main/HomePage) (which is awesome, by the way)
  * (optional) a [Wordnik](http://www.wordnik.com/) API key for creating memorable output folder names
+
+How To Use
+----------
+ * cp config-example.php config.php and optionally add your wordnik API key
+ * change any other things you need in config.php (eg, source directory)
+ * php go.php
